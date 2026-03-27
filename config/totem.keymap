@@ -79,116 +79,81 @@
     };
 
     macros {
-        hd2gd: hd2gd {
+        change_language: change_language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp DOWN &kp UP &kp LEFT &kp UP &kp RIGHT &kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&kp LS(LEFT_ALT)>;
+            label = "CHANGE_LANGUAGE";
         };
 
-        hd2ol: hd2ol {
+        left_bracket: left_bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT &kp DOWN &kp UP &kp RIGHT &kp DOWN>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp LBKT &change_language>;
+            label = "LEFT_BRACKET";
         };
 
-        hd2r: hd2r {
+        right_bracket: right_bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp UP &kp DOWN &kp RIGHT &kp LEFT &kp UP>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp RBKT &change_language>;
+            label = "RIGHT_BRACKET";
         };
 
-        hd2ab: hd2ab {
+        left_brace: left_brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp UP &kp RIGHT &kp DOWN &kp DOWN &kp DOWN>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp LBRC &change_language>;
+            label = "LEFT_BRACE";
         };
 
-        hd2ea: hd2ea {
+        right_brace: right_brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp UP &kp RIGHT &kp DOWN &kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp RBRC &change_language>;
+            label = "RIGHT_BRACE";
         };
 
-        hd2qs: hd2qs {
+        less_than: less_than {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp DOWN &kp DOWN &kp UP &kp LEFT &kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp LESS_THAN &change_language>;
+            label = "LESS_THAN";
         };
 
-        hd2sg: hd2sg {
+        greater_than: greater_than {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp DOWN &kp UP &kp LEFT &kp RIGHT &kp LEFT &kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp GREATER_THAN &change_language>;
+            label = "GREATER_THAN";
         };
 
-        hd2ms: hd2ms {
+        ampersand: ampersand {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp DOWN &kp UP &kp RIGHT &kp RIGHT &kp DOWN>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&change_language &kp AMPERSAND &change_language>;
+            label = "AMPERSAND";
+        };
+
+        hash: hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&change_language &kp HASH &change_language>;
+            label = "HASH";
+        };
+
+        comma: comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&change_language &kp COMMA &change_language>;
+            label = "COMMA";
+        };
+
+        dot: dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&change_language &kp DOT &change_language>;
+            label = "DOT";
         };
     };
 
@@ -200,13 +165,23 @@
             key-positions = <0 1>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <16 17>;
+        kha {
+            bindings = <&kp RBKT>;
+            key-positions = <6 7>;
         };
 
-        delete {
-            bindings = <&kp DEL>;
+        yo {
+            bindings = <&kp GRAVE>;
+            key-positions = <3 4>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <23 24>;
+        };
+
+        comma {
+            bindings = <&kp COMMA>;
             key-positions = <27 28>;
         };
     };
@@ -219,7 +194,7 @@
             bindings = <
          &kp Q            &kp W        &kp E             &kp R          &kp T        &kp Y      &kp U         &kp I          &kp O        &kp P
          &hml LEFT_GUI A  &hml LALT S  &hm LCTRL D       &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K   &hmr RALT L  &hmr RGUI SEMICOLON
-&kp ESC  &kp Z            &kp X        &kp C             &kp V          &kp B        &kp N      &kp M         &kp COMMA      &kp DOT      &kp APOSTROPHE       &kp FSLH
+&kp TAB  &kp Z            &kp X        &kp C             &kp V          &kp B        &kp N      &kp M         &kp COMMA      &kp DOT      &kp APOSTROPHE       &kp FSLH
                                        &kp LEFT_CONTROL  &mo 1          &kp SPACE    &kp SPACE  &mo 2         &kp BACKSPACE
             >;
         };
@@ -227,20 +202,20 @@
         Nav {
             display-name = "Nav";
             bindings = <
-       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4    &kp N5             &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
-       &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp PAUSE_BREAK    &kp PRINTSCREEN  &kp LEFT      &kp UP_ARROW  &kp RIGHT     &kp PAGE_UP
-&none  &none         &none         &none             &kp DELETE      &kp ENTER          &none            &kp HOME      &kp DOWN      &kp END       &kp PAGE_DOWN  &none
-                                   &none             &trans          &kp TAB            &kp ENTER        &mo 3         &none
+         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4    &kp N5             &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
+         &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp PAUSE_BREAK    &kp PRINTSCREEN  &kp LEFT      &kp UP_ARROW  &kp RIGHT     &kp PAGE_UP
+&kp TAB  &none         &none         &none             &kp DELETE      &kp ENTER          &none            &kp HOME      &kp DOWN      &kp END       &kp PAGE_DOWN  &none
+                                     &none             &trans          &none              &kp ENTER        &mo 3         &none
             >;
         };
 
         Sym {
             display-name = "Sym";
             bindings = <
-       &kp EXCL       &kp AT                   &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPS   &kp ASTRK     &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS
-       &kp LESS_THAN  &kp KP_LEFT_PARENTHESIS  &kp HASH  &kp KP_MINUS    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp PLUS   &kp ASTRK     &kp KP_RIGHT_PARENTHESIS  &kp GREATER_THAN
-&none  &none          &none                    &none     &kp UNDERSCORE  &kp KP_SLASH            &kp BACKSLASH          &kp EQUAL  &kp KP_COMMA  &kp KP_DOT                &none                  &none
-                                               &none     &mo 3           &kp TAB                 &kp ENTER              &trans     &none
+       &kp EXCL     &kp AT         &kp HASH    &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+       &less_than   &left_bracket  &ampersand  &kp KP_MINUS    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp PLUS   &none      &right_bracket        &greater_than
+&none  &left_brace  &none          &hash       &kp UNDERSCORE  &kp KP_SLASH            &kp BACKSLASH          &kp EQUAL  &comma     &dot                  &right_brace           &none
+                                   &none       &mo 3           &kp ENTER               &none                  &trans     &none
             >;
         };
 
@@ -256,10 +231,10 @@
 
         Gaming {
             bindings = <
-           &kp TAB           &kp Q  &kp W  &kp E         &kp R        &kp Y    &kp U     &kp I      &kp O    &kp P
-           &kp LEFT_SHIFT    &kp A  &kp S  &kp D         &kp F        &kp H    &kp J     &kp K      &kp L    &kp SEMICOLON
-&kp GRAVE  &kp LEFT_CONTROL  &kp Z  &kp X  &kp C         &kp V        &kp N    &kp M     &kp COMMA  &kp DOT  &kp SLASH      &kp APOS
-                                    &to 0  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp BSPC  &kp MINUS
+           &kp TAB           &kp Q  &kp X  &kp E         &kp R        &kp Y    &kp U             &kp I          &kp O    &kp P
+           &kp LEFT_SHIFT    &kp A  &kp W  &kp D         &kp F        &kp H    &kp J             &kp K          &kp L    &kp SEMICOLON
+&kp GRAVE  &kp LEFT_CONTROL  &kp Z  &kp S  &kp C         &kp V        &kp N    &kp M             &kp COMMA      &kp DOT  &kp SLASH      &kp APOS
+                                    &to 0  &kp LEFT_ALT  &kp SPACE    &kp RET  &kp LEFT_CONTROL  &kp BACKSPACE
             >;
 
             display-name = "Gaming";
