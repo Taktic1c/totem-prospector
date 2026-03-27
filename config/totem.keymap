@@ -197,10 +197,10 @@
         Base {
             display-name = "Base";
             bindings = <
-         &kp Q            &kp W        &kp E             &kp R          &kp T        &kp Y      &kp U         &kp I          &kp O        &kp P
-         &hml LEFT_GUI A  &hml LALT S  &hm LCTRL D       &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K   &hmr RALT L  &hmr RGUI SEMICOLON
-&kp TAB  &kp Z            &kp X        &kp C             &kp V          &kp B        &kp N      &kp M         &kp COMMA      &kp DOT      &kp APOSTROPHE       &kp FSLH
-                                       &kp LEFT_CONTROL  &mo 1          &kp SPACE    &kp SPACE  &mo 2         &kp BACKSPACE
+         &kp Q            &kp W        &kp E             &kp R          &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P
+         &hml LEFT_GUI A  &hml LALT S  &hm LCTRL D       &hml LSHIFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON
+&kp TAB  &kp Z            &kp X        &kp C             &kp V          &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp APOSTROPHE       &kp BACKSPACE
+                                       &kp LEFT_CONTROL  &mo 1          &kp SPACE    &kp SPACE  &mo 2         &kp ENTER
             >;
         };
 
@@ -209,7 +209,7 @@
             bindings = <
          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4    &kp N5             &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp N0
          &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp PAUSE_BREAK    &kp PRINTSCREEN  &kp LEFT      &kp UP_ARROW  &kp RIGHT     &kp PAGE_UP
-&kp TAB  &none         &none         &none             &kp DELETE      &kp ENTER          &none            &kp HOME      &kp DOWN      &kp END       &kp PAGE_DOWN  &none
+&kp TAB  &none         &none         &none             &kp DELETE      &kp ENTER          &none            &kp HOME      &kp DOWN      &kp END       &kp PAGE_DOWN  &kp DELETE
                                      &none             &trans          &none              &kp ENTER        &mo 3         &none
             >;
         };
