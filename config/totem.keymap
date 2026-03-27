@@ -181,12 +181,12 @@
         };
 
         dot {
-            bindings = <&kp DOT>;
+            bindings = <&dot>;
             key-positions = <23 24>;
         };
 
         comma {
-            bindings = <&kp COMMA>;
+            bindings = <&comma>;
             key-positions = <27 28>;
         };
     };
